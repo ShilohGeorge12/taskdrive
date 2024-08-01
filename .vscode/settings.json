@@ -1,0 +1,49 @@
+{
+	"workbench.editor.customLabels.patterns": {
+		"**/app/**/page.tsx": "${dirname} - Page",
+		"**/app/**/index.tsx": "${dirname} - Index",
+		"**/app/**/loading.tsx": "${dirname} - Loading",
+		"**/app/**/error.tsx": "${dirname} - Error",
+		"**/app/**/layout.tsx": "${dirname} - Layout",
+		"**/components/**/index.tsx": "${dirname} - Component",
+		"**/context/**/index.tsx": "Context API",
+		"**/lib/**/index.tsx": "${dirname} - Service",
+		"**/hooks/**/index.tsx": "${dirname} - Hook",
+		"**/types/**/index.tsx": "Types"
+	},
+	"importSorter.sortConfiguration.customOrderingRules.defaultNumberOfEmptyLinesAfterGroup": 2,
+	"importSorter.sortConfiguration.customOrderingRules.rules": [
+		{
+			"regex": "^next*",
+			"orderLevel": 10
+		},
+		{
+			"regex": "^react*",
+			"orderLevel": 10
+		},
+		{
+			"regex": "^@/lib/*",
+			"orderLevel": 20
+		},
+		{
+			"regex": "^mongoose*",
+			"orderLevel": 20
+		},
+		{
+			"regex": "^@/hooks/*",
+			"orderLevel": 30
+		},
+		{
+			"regex": "^@/components/*",
+			"orderLevel": 30
+		},
+		{
+			"regex": "^@/types/*",
+			"orderLevel": 40
+		},
+		{
+			"regex": ".*",
+			"orderLevel": 50
+		}
+	]
+}
