@@ -1,10 +1,10 @@
 import { config } from 'dotenv';
-config();
 import { cleanEnv, str } from 'envalid';
 
+config();
 export const env = cleanEnv(process.env, {
 	DATABASE_URL: str(),
-	SECRET: str(),
+	// SECRET: str(),
 	BASE_URL: str(),
 	// NEXT_PUBLIC_GOOGLE_API_KEY: str(),
 });
