@@ -1,22 +1,17 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import { Btn } from '@/components/UI/button';
+
 import ErrorImage from '@/assets/error.png';
 import login from '@/assets/login.jpg';
+import { motion } from 'framer-motion';
 
 export default function Error({ reset }: { error: Error; reset: () => void }) {
 	return (
-		<main className='w-full h-screen flex flex-col'>
-			<Image
-				src={login}
-				alt=''
-				priority
-				className='fixed top-0 object-center md:object-cover size-full -z-10'
-			/>
+		<main className='w-full h-screen flex flex-col bg-gradient-to-br from-purple-400 to-purple-600'>
 			<motion.section
 				className='w-full h-full flex flex-col'
 				initial={{ opacity: 0, translateY: '-100vh', translateZ: -100 }}
@@ -30,14 +25,14 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 						title='error Something went wrong'
 						alt='error Something went wrong'
 					/>
-					<hr className='w-[2px] md:h-40 h-36 rounded-xl bg-black' />
+					<hr className='w-1 md:h-40 h-36 rounded-xl bg-black/50' />
 					<section className='flex flex-col gap-4 items-center'>
 						<p className='text-sm md:text-lg font-bold tracking-wider'>Something Went Wrong! </p>
 						<Btn
 							title='Try again'
 							style={{
 								size: 'w-[6rem] h-10',
-								color: 'bg-white text-black hover:bg-black hover:text-white',
+								color: 'bg-white/50 text-black hover:bg-white/80',
 								shadow: 'hover:shadow-lg',
 								more: 'font-semibold tracking-wider',
 							}}
@@ -46,7 +41,7 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 						<Link
 							href={'/'}
 							title='Back To Home'
-							className={`w-3/4 h-10 flex items-center justify-center bg-white text-black hover:bg-black hover:text-white hover:shadow-lg 	font-semibold tracking-wider rounded-lg transition-all duration-500 ease-in-out`}>
+							className={`w-3/4 h-10 flex items-center justify-center bg-white/50 text-black hover:bg-white/80  hover:shadow-lg font-semibold tracking-wider rounded-lg transition-all duration-500 ease-in-out`}>
 							Back To Home
 						</Link>
 					</section>

@@ -1,11 +1,11 @@
-import { MongoDB } from '@/db';
-import { Task } from '@/components/UI/tasks';
 import { getSession } from '@/lib/sessions';
-import { redirect } from 'next/navigation';
+
+import { Task } from '@/components/UI/tasks';
+
+import { MongoDB } from '@/db';
 
 export default async function HomePage() {
 	const session = await getSession();
-	// if (!session) redirect('/login');
 
 	const tasks = await MongoDB.getTasks().find({ userId: session?.user._id.toString() });
 	return (

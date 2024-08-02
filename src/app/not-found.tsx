@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-import notFoundImage from '@/assets/notFound.png';
 import { NotFoundAnimate } from '@/components/UI/notFound';
 import { NotFoundClient } from '@/components/UI/notfoundClient';
+
+import notFoundImage from '@/assets/notFound.png';
 
 export const metadata: Metadata = {
 	title: `404 - Page Not Found`,
 	description: `404 Error - The Page you are looking for was Not Found.`,
 };
 
+// from-[#a72cc5] to-[#DADADA]'>
 export default function NotFound() {
 	return (
-		<main className='w-full h-screen flex flex-col bg-gradient-to-br from-[#EF5C09] to-[#DADADA]'>
+		<main className='w-full h-screen flex flex-col bg-gradient-to-br from-purple-400 to-purple-600'>
 			<NotFoundAnimate>
 				<>
 					<section className='flex items-center justify-center gap-4 w-[90%]'>

@@ -1,9 +1,11 @@
 'use client';
 
-import { useTransition, useState, FormEvent, ChangeEvent } from 'react';
-import { PASSWORD_FORMAT_MESSAGE, PASSWORD_REGEX } from '@/types';
-import { FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import { ChangeEvent, FormEvent, useState, useTransition } from 'react';
+import { FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa';
+
+import { PASSWORD_FORMAT_MESSAGE, PASSWORD_REGEX } from '@/types';
+
 import { onResetPassword } from '@/actions';
 
 export function ResetPasswordForm({ email }: { email: string }) {
@@ -122,7 +124,7 @@ export function ResetPasswordForm({ email }: { email: string }) {
 			<button
 				type='submit'
 				name={`sign up Button`}
-				className={` w-[90%] md:w-2/4 h-10 px-4 flex items-center justify-center gap-4 bg-white focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white disabled:ring-white/50 disabled:bg-white/50 rounded-lg outline-0 tracking-wider transition-all duration-500 ease-in-out text-lg font-semibold`}
+				className={` w-[90%] md:w-2/4 h-10 px-4 flex items-center justify-center gap-4 bg-white/70 focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white/70 disabled:ring-white/50 disabled:bg-white/50 rounded-lg outline-0 tracking-wider transition-all duration-500 ease-in-out text-lg font-semibold`}
 				disabled={isPending}>
 				{isPending && (
 					<span className='text-2xl'>

@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useTransition, useState, FormEvent, ChangeEvent } from 'react';
-import { EMAIL_REGEX, INVALID_EMAIL_MESSAGE, PASSWORD_FORMAT_MESSAGE, PASSWORD_REGEX } from '@/types';
+import { ChangeEvent, FormEvent, useState, useTransition } from 'react';
 import { FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa';
+
+import { EMAIL_REGEX, INVALID_EMAIL_MESSAGE, PASSWORD_FORMAT_MESSAGE, PASSWORD_REGEX } from '@/types';
+
 import { onLogin } from '@/actions';
 
 export function Form() {
@@ -93,7 +95,7 @@ export function Form() {
 						value={formData.password}
 						onChange={onChange}
 						disabled={isPending}
-						className='size-full px-4 bg-white/70 focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white/70 focus:ring-white rounded-lg outline-0 tracking-wide transition-all duration-500 ease-in-out'
+						className='w-full h-10 px-4 bg-white/70 focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white/70 focus:ring-white rounded-lg outline-0 tracking-wide transition-all duration-500 ease-in-out'
 					/>
 					<button
 						type='button'
@@ -115,7 +117,7 @@ export function Form() {
 			<button
 				type='submit'
 				name={`login button`}
-				className='w-[90%] md:w-2/4 h-10 px-4 flex items-center justify-center gap-4 bg-white focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white disabled:ring-white/50 disabled:bg-white/50 rounded-lg outline-0 tracking-wider transition-all duration-500 ease-in-out text-lg font-semibold'
+				className='w-[90%] md:w-2/4 h-10 px-4 flex items-center justify-center gap-4 bg-white/70 focus:bg-white ring-0 hover:ring-1 focus:ring-2 ring-white disabled:ring-white/50 disabled:bg-white/50 rounded-lg outline-0 tracking-wider transition-all duration-500 ease-in-out text-lg font-semibold'
 				disabled={isPending}>
 				{isPending && (
 					<span className='text-2xl'>

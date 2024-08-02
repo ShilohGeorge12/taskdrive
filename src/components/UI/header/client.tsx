@@ -3,16 +3,16 @@
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { FormEvent, ReactNode, useRef, useState, useTransition } from 'react';
-import { onCreateNewTask, addFile, addFolder, onLogout } from '@/actions';
+import { FaPlusCircle, FaSpinner } from 'react-icons/fa';
+import { FiMenu } from 'react-icons/fi';
+
 import { DESCRIPTION_REGEX, TITLE_REGEX } from '@/types';
 
+import { addFile, addFolder, onCreateNewTask, onLogout } from '@/actions';
+import logo from '@/assets/logo.png';
+import { motion } from 'framer-motion';
 import { Aside } from '../aside';
 import NavLinks from '../navLInks';
-import { motion } from 'framer-motion';
-
-import { FiMenu } from 'react-icons/fi';
-import { FaPlusCircle, FaSpinner } from 'react-icons/fa';
-import logo from '@/assets/ZOEacad Logo.svg';
 
 export function Client({ children, userId }: { children: ReactNode; userId: string }) {
 	const path = usePathname();
@@ -302,6 +302,7 @@ export function Client({ children, userId }: { children: ReactNode; userId: stri
 							src={logo}
 							alt="zoe's Logo"
 							title="zoe's Logo"
+							priority
 							className='object-cover size-12'
 						/>
 

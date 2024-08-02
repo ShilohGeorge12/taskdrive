@@ -1,7 +1,9 @@
 import Image from 'next/image';
+
 import { getSession } from '@/lib/sessions';
+
+import logo from '@/assets/logo.png';
 import { Client } from './client';
-import logo from '@/assets/ZOEacad Logo.svg';
 
 export default async function Header() {
 	const session = await getSession();
