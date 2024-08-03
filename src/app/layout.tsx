@@ -24,12 +24,16 @@ export const metadata: Metadata = {
 	keywords: 'task drive, tasks, drive, taskdrive',
 	authors: [{ name: 'Shiloh George' }],
 	publisher: 'Shiloh George',
+	creator: 'Shiloh George',
 	robots: 'index, follow',
 	openGraph: {
 		title,
 		description,
 		siteName: 'taskdrive',
+		emails: ['shiloh_george@icloud.com'],
+		images: ['/logo.png', '/logo-128.png', '/logo-64.png'],
 	},
+	appleWebApp: { title, capable: true, startupImage: '/logo.png' },
 	twitter: {
 		card: 'summary',
 		site: url,
