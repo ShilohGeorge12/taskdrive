@@ -7,7 +7,7 @@ export default function LandingPage() {
 		<main className='w-full h-screen bg-gradient-to-br from-purple-300 to-purple-500'>
 			<Header />
 			<section className='fixed bottom-24 md:bottom-28 left-1 w-full gap-8 flex flex-col '>
-				<h2 className='w-3/4 flex items-center justify-center mx-auto p-2 text-2xl text-black font-semibold tracking-wider'>Take Control of Your Day</h2>
+				<h1 className='w-3/4 flex items-center justify-center mx-auto p-2 text-2xl text-black font-semibold tracking-wider'>Take Control of Your Day</h1>
 				<p className='w-3/4 flex items-center justify-center text-justify mx-auto p-2 text-lg text-black font-normal tracking-wider'>
 					Elevate your productivity with TaskDrive. Effortlessly prioritize tasks and manage files using our intuitive, streamlined dashboard. Organize your workflow with
 					precision and experience the power of efficient task management. Sign up today and transform the way you work.

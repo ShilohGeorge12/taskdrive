@@ -1,6 +1,15 @@
+import { Metadata } from 'next/types';
+
 import Header from '@/components/UI/header';
+
 import { Nav } from './nav';
 import { Wrapper } from './wrapper';
+
+export const metadata: Metadata = {
+	authors: [{ name: 'Shiloh George' }],
+	publisher: 'Shiloh George',
+	robots: 'index, follow',
+};
 
 export default function HomeLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (

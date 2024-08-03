@@ -1,37 +1,40 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+
+import { ContextProvider } from '@/context';
 import { env } from '@/env';
 import { Toaster } from 'sonner';
-import { ContextProvider } from '@/context';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title_longName = 'zoe';
+const title_longName = 'Task Drive: Streamline Task Management & Boost Productivity';
 const title = `${title_longName}`;
-const description = '' + title_longName; //add description
+const description =
+	'Boost productivity with TaskDrive. Prioritize tasks, manage files, and organize workflow effortlessly. Sign up now to transform your work efficiency.';
 const url = env.BASE_URL;
 
 export const metadata: Metadata = {
 	metadataBase: new URL(url),
 	title: {
 		default: title,
-		template: `%s | ${title_longName}`,
+		template: `%s | Streamline Task Management & Boost Productivity`,
 	},
 	description,
-	keywords: 'zoe, ZOE',
-	authors: [{ name: 'Shiloh George' }, { name: 'Emelu Caleb' }],
+	keywords: 'task drive, tasks, drive, taskdrive',
+	authors: [{ name: 'Shiloh George' }],
+	publisher: 'Shiloh George',
 	robots: 'index, follow',
 	openGraph: {
 		title,
 		description,
-		siteName: 'zoe', // cross checl later
+		siteName: 'taskdrive',
 	},
 	twitter: {
 		card: 'summary',
 		site: url,
 		creator: 'Shiloh George',
-		images: '/save-time-512.png',
+		images: '/logo.png',
 	},
 	alternates: { canonical: url },
 };

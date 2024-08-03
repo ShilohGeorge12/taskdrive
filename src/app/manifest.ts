@@ -1,13 +1,14 @@
 import { MetadataRoute } from 'next';
+
 import { env } from '@/env';
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
 		// scope: '/',
 		lang: 'en',
-		name: 'ZOE',
-		description: 'ZOE',
-		short_name: 'zoe',
+		name: 'Task Drive: Streamline Task Management & Boost Productivity',
+		description: 'Boost productivity with TaskDrive. Prioritize tasks, manage files, and organize workflow effortlessly. Sign up now to transform your work efficiency.',
+		short_name: 'taskdrive',
 		start_url: '/',
 		display: 'standalone',
 		theme_color: 'rgb(203 213 225)',
@@ -46,8 +47,8 @@ export default function manifest(): MetadataRoute.Manifest {
 		],
 		protocol_handlers: [
 			{
-				protocol: 'web+zoe',
-				url: env.BASE_URL ? `${env.BASE_URL}/%s` : `http://localhost:${process.env.PORT ?? 4500}/%s`,
+				protocol: 'web+taskdrive',
+				url: env.BASE_URL ? `${env.BASE_URL}/%s` : `http://localhost:${process.env.PORT ?? 4550}/%s`,
 			},
 		],
 	};
